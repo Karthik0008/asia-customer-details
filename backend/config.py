@@ -13,7 +13,7 @@ load_dotenv()
 SUPABASE_URL: str = os.getenv("SUPABASE_URL", "")
 SUPABASE_KEY: str = os.getenv("SUPABASE_KEY", "")
 SUPABASE_SERVICE_ROLE_KEY: str = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
-FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:5173")
+FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:5173").rstrip("/")
 
 # Public client (uses anon key – respects RLS)
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
