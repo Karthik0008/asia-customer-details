@@ -62,9 +62,16 @@ export default function GallerySection() {
                                 onClick={() => setLightbox(item)}
                             >
                                 {item.type === 'video' ? (
-                                    <div className="w-full h-full bg-ap-dark-card flex items-center justify-center">
-                                        <HiPlayCircle className="text-ap-gold text-6xl group-hover:scale-110 transition-transform" />
-                                        <span className="absolute bottom-3 left-3 text-white text-xs bg-black/50 px-2 py-1 rounded">Video</span>
+                                    <div className="w-full h-full bg-ap-dark-card">
+                                        <video
+                                            src={item.url}
+                                            muted
+                                            loop
+                                            autoPlay
+                                            playsInline
+                                            className="w-full h-full object-cover"
+                                        />
+                                        <span className="absolute bottom-3 left-3 text-white text-xs bg-black/50 px-2 py-1 rounded z-10">Video</span>
                                     </div>
                                 ) : (
                                     <img
@@ -99,7 +106,7 @@ export default function GallerySection() {
                         onClick={(e) => e.stopPropagation()}
                     >
                         {lightbox.type === 'video' ? (
-                            <video src={lightbox.url} controls autoPlay className="max-h-[85vh] rounded-xl" />
+                            <video src={lightbox.url} controls autoPlay muted playsInline className="max-h-[85vh] rounded-xl" />
                         ) : (
                             <img src={lightbox.url} alt={lightbox.name} className="max-h-[85vh] rounded-xl object-contain" />
                         )}
