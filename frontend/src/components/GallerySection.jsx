@@ -39,7 +39,7 @@ export default function GallerySection() {
                 {loading && (
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {[1, 2, 3, 4, 5, 6].map((i) => (
-                            <div key={i} className="aspect-video rounded-xl bg-ap-dark-card animate-shimmer" />
+                            <div key={i} className="aspect-[9/16] md:aspect-video rounded-xl bg-ap-dark-card animate-shimmer" />
                         ))}
                     </div>
                 )}
@@ -58,7 +58,7 @@ export default function GallerySection() {
                         {items.map((item, i) => (
                             <div
                                 key={item.name}
-                                className="group relative aspect-video rounded-xl overflow-hidden cursor-pointer animate-fadeInUp opacity-0"
+                                className="group relative aspect-[9/16] md:aspect-video rounded-xl overflow-hidden cursor-pointer animate-fadeInUp opacity-0"
                                 onClick={() => setLightbox(item)}
                             >
                                 {item.type === 'video' ? (
