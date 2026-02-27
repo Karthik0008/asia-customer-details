@@ -23,11 +23,11 @@ export default function Navbar() {
                     {/* Logo */}
                     <a href="#home" className="flex items-center gap-3 group">
                         <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-ap-red to-ap-gold flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
-                            AP
+                            KS
                         </div>
                         <div>
-                            <h1 className="text-white font-bold text-lg leading-tight">Asian Paints</h1>
-                            <p className="text-ap-gold text-xs tracking-wider">AUTHORIZED AGENT</p>
+                            <h1 className="text-white font-bold text-lg leading-tight">KUMARAGURU S</h1>
+                            <p className="text-ap-gold text-xs tracking-wider">AUTHORIZED ASIAN PAINTS AGENT</p>
                         </div>
                     </a>
 
